@@ -19,7 +19,9 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = "5" - 2; can run either way as it is subtraction. It may look better without quotes.
+  let result = Number("5") - 2;
+console.log("The result is: " + result + 2);
 console.log("The result is: " + result);
 
 let isValid = Boolean("false");
