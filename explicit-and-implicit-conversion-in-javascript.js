@@ -19,16 +19,24 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2; can run either way as it is subtraction. It may look better without quotes.
-  let result = Number("5") - 2;
-console.log("The result is: " + result + 2);
+let result = "5" - 2; // can run either way as it is subtraction- implicit converstion changes 5 into a number. It may look better without quotes.
+  let result = Number("5") - 2; // would be an explicit conversion 
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean("false"); //this automatically runs true because it is a string, not a 0, null, undefined, etc. value- explicit conversion 
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
-let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+let age = "25"; // Declare a variable 'age'and assign to a string value "25"; // fixes the out come of 255
+let totalAge = Number(age) + 5;// convert 'age' from a string to a number then add 5
+console.log("Total Age: " + totalAge); explicit conversion
+//Implicit Conversion:
+let studentAge = "10" * 2;
+console.log("The student's age is:" , studentAge); // Output: 20
+// Explicit Conversion:
+let studentAge = Number("10") * 2;
+console.log("The student's age is:", studentAge); // Output:20
+// Explicit Conversion using Edge Case- Null
+let studentAge= Number(null) * 2;
+console.log("The student's age is:", studentAge); // Output: 0
